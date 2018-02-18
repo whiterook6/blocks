@@ -1,0 +1,23 @@
+{
+  "name": "blocks",
+  "version": "1.0.0",
+  "description": "Bitcoin Wallet Viewer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whiterook6/blocks.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "blockchain",
+    "wallets",
+    "charts",
+    "css",
+    "bulma"
+  ],
+  "author": "whiterook6@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whiterook6/blocks/issues"
+  },
+  "homepage": "https://github.com/whiterook6/blocks#readme"
+}
