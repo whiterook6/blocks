@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Blocks!</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 </head>
 <body>
 	<nav class="navbar is-link has-shadow" role="navigation" aria-label="main navigation">
@@ -36,6 +35,102 @@
 		</aside>
 		<div class="column is-9">
 			<div class="section">
+				<div class="tabs" style="justify-content: space-between;">
+					<ul>
+						<li><a>Balance</a></li>
+						<li><a>Addresses</a></li>
+						<li class="is-active"><a>Transactions</a></li>
+						<li><a>Settings</a></li>
+					</ul>
+					<ul style="float:right;flex-grow:0">
+						<li class="is-active"><a>Bitcoin</a></li>
+						<li><a>USD</a></li>
+					</ul>
+				</div>
+<style>
+.transactions {
+	position: relative;
+}
+.transactions > .timeline {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 50%;
+	border-right: 3px solid hsl(0, 0%, 21%);
+}
+.transactions .transaction {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.transactions .transaction .total {
+	border: 3px solid hsl(0, 0%, 21%);
+	border-radius: 40px;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+	position: relative;
+	background-color: white;
+}
+.transactions .transaction .total .right {
+	position: absolute;
+	padding: 0.5rem;
+	left: 100%;
+	text-align: left;
+	top: 0;
+	width: 1000%;
+}
+.transactions .transaction .total .left {
+	position: absolute;
+	padding: 0.5rem;
+	text-align: right;
+	right: 100%;
+	top: 0;
+	width: 1000%;
+}
+.transactions .transaction .total .out {
+	color: red;
+}
+.transactions .transaction .total .in {
+	color: green;
+}
+</style>
+				<div class="transactions">
+					<div class="timeline"></div>
+					<div class="transaction">
+						<div class="total">Start</div>
+					</div>
+					<div class="transaction">
+						<div class="total">₿0.4317
+							<span class="left in">+₿0.4317</span>
+							<span class="right">Jan 1st, 2017 @ 4:15PM</span>
+						</div>
+					</div>
+					<div class="transaction">
+						<div class="total">₿0.4000
+							<span class="left">Jan 2nd, 2017 @ 4:15PM</span>
+							<span class="right out">-₿0.0317</span>
+						</div>
+					</div>
+					<div class="transaction">
+						<div class="total">₿0.3000
+							<span class="left">Jan 3rd, 2017 @ 5:15PM</span>
+							<span class="right out">-₿0.1</span>
+						</div>
+					</div>
+					<div class="transaction">
+						<div class="total">₿1.3000
+							<span class="left in">+₿1</span>
+							<span class="right">Jan 3rd, 2017 @ 6:15PM</span>
+						</div>
+					</div>
+					<div class="transaction">
+						<div class="total">₿1.3000
+							<span class="left">Current value:</span>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="tabs" style="justify-content: space-between;">
 					<ul>
 						<li class="is-active"><a>Balance</a></li>
