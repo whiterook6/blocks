@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/whiterook6/blocks/issues"
   },
-  "homepage": "https://github.com/whiterook6/blocks#readme"
+  "homepage": "https://github.com/whiterook6/blocks#readme",
+  "dependencies": {}
 }
