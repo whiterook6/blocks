@@ -1,0 +1,52 @@
+.transactions {
+	position: relative;
+
+	> .timeline {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 50%;
+		border-right: 3px solid hsl(0, 0%, 21%);
+	}
+
+	.transaction {
+		text-align: center;
+		margin-bottom: 1rem;
+
+		.total {
+			border: 3px solid hsl(0, 0%, 21%);
+			border-radius: 40px;
+			padding: 0.5rem 1rem;
+			display: inline-block;
+			position: relative;
+			background-color: white;
+
+			.right {
+				position: absolute;
+				padding: 0.5rem;
+				left: 100%;
+				text-align: left;
+				top: 0;
+				white-space: nowrap;
+			}
+
+			.left {
+				position: absolute;
+				padding: 0.5rem;
+				text-align: right;
+				right: 100%;
+				top: 0;
+				white-space: nowrap;
+			}
+
+			.out {
+				color: red;
+			}
+
+			.in {
+				color: green;
+			}
+		}
+	}
+}

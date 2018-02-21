@@ -35,6 +35,18 @@
 		</aside>
 		<div class="column is-9">
 			<div class="section">
+				<div class="tabs">
+					<ul>
+						<li><a>Balance</a></li>
+						<li><a>Addresses</a></li>
+						<li><a>Transactions</a></li>
+						<li class="is-active"><a>Settings</a></li>
+					</ul>
+				</div>
+
+				<label class="label" for="blockchain_info_api_key">API Key</label>
+				<input type="text" class="input" placeholder="abcdef...12345" />
+
 				<div class="tabs" style="justify-content: space-between;">
 					<ul>
 						<li><a>Balance</a></li>
@@ -47,53 +59,7 @@
 						<li><a>USD</a></li>
 					</ul>
 				</div>
-<style>
-.transactions {
-	position: relative;
-}
-.transactions > .timeline {
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 50%;
-	border-right: 3px solid hsl(0, 0%, 21%);
-}
-.transactions .transaction {
-	text-align: center;
-	margin-bottom: 1rem;
-}
-.transactions .transaction .total {
-	border: 3px solid hsl(0, 0%, 21%);
-	border-radius: 40px;
-	padding: 0.5rem 1rem;
-	display: inline-block;
-	position: relative;
-	background-color: white;
-}
-.transactions .transaction .total .right {
-	position: absolute;
-	padding: 0.5rem;
-	left: 100%;
-	text-align: left;
-	top: 0;
-	white-space: nowrap;
-}
-.transactions .transaction .total .left {
-	position: absolute;
-	padding: 0.5rem;
-	text-align: right;
-	right: 100%;
-	top: 0;
-	white-space: nowrap;
-}
-.transactions .transaction .total .out {
-	color: red;
-}
-.transactions .transaction .total .in {
-	color: green;
-}
-</style>
+
 				<div class="transactions">
 					<div class="timeline"></div>
 					<div class="transaction">

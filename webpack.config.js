@@ -4,13 +4,13 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: './client/Rhino/scripts/rhino.js',
-		vendor: [
-			'angular',
-			'angular-animate',
-			'angular-resource',
-			'angular-route',
-		]
+		// app: './client/Rhino/scripts/rhino.js',
+		// vendor: [
+		// 	'angular',
+		// 	'angular-animate',
+		// 	'angular-resource',
+		// 	'angular-route',
+		// ]
 	},
 	output: {
 		path: __dirname + '/public/assets/',
