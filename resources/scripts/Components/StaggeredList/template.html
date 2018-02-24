@@ -1,4 +1,4 @@
 <div>Staggered Items:</div>
-<div ng-repeat="item in ctrl.staggered_items" class="itemContainer">
+<div ng-repeat="item in ctrl.staggered_items track by $index" class="itemContainer">
 	<span class="item" ng-bind="item"></span>
 </div>

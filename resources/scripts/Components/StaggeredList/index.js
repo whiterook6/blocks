@@ -18,6 +18,7 @@ let StaggeredList = function() {
 class StaggeredListController {
 	constructor($interval, $scope) {
 		console.log('Create StaggeredListController');
+		let ctrl = this;
 		this.$interval = $interval;
 		this.$scope = $scope;
 		this.staggered_items = [];
@@ -30,15 +31,17 @@ class StaggeredListController {
 
 		// on data change, begin staggering. Stop old stagger and start if the new collection
 		// isn't empty.
-		// this.$scope.$watchCollection('this.source', (new_collection, old_collection)=> {
-		// 	console.log('Watch Collection');
-		// 	this.stop_stagger();
-		// 	this.staggered_items = [];
+		this.$scope.$watchCollection(() => {
+			return this.source;
+		}, (new_collection, old_collection) => {
+			console.log('Watch Collection');
+			this.stop_stagger();
+			this.staggered_items = [];
 			
-		// 	if (new_collection && new_collection.length){
-		// 		this.start_stagger();
-		// 	}
-		// });
+			if (new_collection && new_collection.length){
+				this.start_stagger();
+			}
+		});
 
 		// Make sure that the interval is destroyed too
 		this.$scope.$on('$destroy', function() {
