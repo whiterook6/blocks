@@ -6,7 +6,8 @@
 	<title>Blocks!</title>
 	<link rel="stylesheet" href="./assets/bundle.css">
 </head>
-<body>
+<body ng-app="blocks"
+	ng-controller="BlocksController as ctrl">
 	<nav class="navbar is-link has-shadow" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="https://bulma.io">
@@ -37,28 +38,15 @@
 			<div class="section">
 				<div class="tabs">
 					<ul>
-						<li><a>Balance</a></li>
-						<li><a>Addresses</a></li>
-						<li><a>Transactions</a></li>
-						<li class="is-active"><a>Settings</a></li>
+						<li ng-repeat="tab in ctrl.tabs"
+							ng-class="{'is-active': tab.key == ctrl.current_tab.key}"
+							ng-click="ctrl.select_tab(tab)">
+							<a ng-bind="tab.label"></a>
+						</li>
 					</ul>
 				</div>
 
-				<label class="label" for="blockchain_info_api_key">API Key</label>
-				<input type="text" class="input" placeholder="abcdef...12345" />
-
-				<div class="tabs" style="justify-content: space-between;">
-					<ul>
-						<li><a>Balance</a></li>
-						<li><a>Addresses</a></li>
-						<li class="is-active"><a>Transactions</a></li>
-						<li><a>Settings</a></li>
-					</ul>
-					<ul style="float:right;flex-grow:0">
-						<li class="is-active"><a>Bitcoin</a></li>
-						<li><a>USD</a></li>
-					</ul>
-				</div>
+				<div ng-view></div>
 
 				<div class="transactions">
 					<div class="timeline"></div>
@@ -96,22 +84,6 @@
 					</div>
 				</div>
 
-
-				<div class="tabs" style="justify-content: space-between;">
-					<ul>
-						<li class="is-active"><a>Balance</a></li>
-						<li><a>Addresses</a></li>
-						<li><a>Transactions</a></li>
-						<li><a>Settings</a></li>
-					</ul>
-					<ul style="float:right;flex-grow:0">
-						<li><a>24h</a></li>
-						<li><a>7d</a></li>
-						<li class="is-active"><a>31d</a></li>
-						<li><a>365d</a></li>
-						<li><a>All</a></li>
-					</ul>
-				</div>
 				<nav class="columns is-gapless">
 					<div class="column has-text-centered">
 						<p class="heading">Balance</p>
