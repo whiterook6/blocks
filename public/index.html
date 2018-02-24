@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Blocks!</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+	<link rel="stylesheet" href="./assets/bundle.css">
 </head>
 <body>
 	<nav class="navbar is-link has-shadow" role="navigation" aria-label="main navigation">
@@ -134,33 +134,14 @@
 						<p class="title">30%</p>
 					</div>
 				</nav>
-				<div class="box" id="chart"></div>
-				<script src="https://code.highcharts.com/highcharts.src.js"></script>
-				<script>
-Highcharts.chart('chart', {
-    chart: {
-        type: 'line'
-    },
-    title: {
-        text: 'Wallet Balance'
-    },
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
-    yAxis: {
-        title: {
-            text: 'BTC'
-        }
-    },
-    series: [{
-        name: 'Balance',
-        data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-    }]
-});
-
+				<div class="box" id="chart">
+					Chart Here
+				</div>
 				</script>
 			</div>
 		</div>
 	</div>
+	<script src="./assets/vendor.bundle.js"></script>
+	<script src="./assets/bundle.js"></script>
 </body>
 </html>
