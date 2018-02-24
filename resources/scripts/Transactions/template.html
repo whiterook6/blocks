@@ -1,1 +1,6 @@
-Transactions View
+<div ng-repeat="transaction in ctrl.Transactions.data"
+	ng-bind="transaction"></div>
+
+<button type="button"
+	class="button"
+	ng-click="ctrl.refresh()">Refresh</button>

@@ -26,7 +26,7 @@ class Blocks {
 			}
 		}];
 
-		this.current_tab = this.tabs[0];
+		this.current_tab = this.tabs[2];
 	}
 
 	select_tab(tab){

@@ -26,4 +26,4 @@ angular
 	])
 	.config(Routes)
 	.controller('BlocksController', BlocksController)
-	.run(reload_optional);
+	// .run(reload_optional);

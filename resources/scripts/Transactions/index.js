@@ -6,5 +6,5 @@ import TransactionsService from './service.js'
 
 export default angular.module('blocks.transactions', [])
 	.controller('TransactionsController', TransactionsController)
-	.service('TransactionsService', TransactionsService)
+	.service('Transactions', TransactionsService)
 	.name;
