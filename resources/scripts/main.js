@@ -14,6 +14,8 @@ import Balances from './Balances/';
 import Settings from './Settings/';
 import Transactions from './Transactions/';
 
+import StaggeredList from './Components/StaggeredList/'
+
 angular
 	.module('blocks', [
 		Balances,
@@ -24,6 +26,7 @@ angular
 		ngResource,
 		ngRoute
 	])
+	.directive('staggeredList', StaggeredList)
 	.config(Routes)
 	.controller('BlocksController', BlocksController)
 	// .run(reload_optional);
