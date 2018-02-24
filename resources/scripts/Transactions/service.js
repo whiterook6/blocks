@@ -1,6 +1,6 @@
 class Service {
 	constructor($timeout) {
-		this.data = [1];
+		this.data = [1,2,3,4,5,6,7,8,9];
 		this.$timeout = $timeout;
 	}
 

@@ -18,13 +18,13 @@ import StaggeredList from './Components/StaggeredList/'
 
 angular
 	.module('blocks', [
+		ngAnimate,
+		ngResource,
+		ngRoute,
+
 		Balances,
 		Settings,
 		Transactions,
-
-		ngAnimate,
-		ngResource,
-		ngRoute
 	])
 	.directive('staggeredList', StaggeredList)
 	.config(Routes)

@@ -20,7 +20,7 @@ module.exports = {
 	module: {
 		loaders: [{
 			test: /\.css$/,
-			loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+			loader: ExtractTextPlugin.extract('style-loader', 'css')
 		}, {
 			test: /\.scss$/,
 			loader: ExtractTextPlugin.extract('style-loader', 'css!sass')
@@ -42,16 +42,16 @@ module.exports = {
 		new ExtractTextPlugin('bundle.css', {
 			allChunks: true
 		}),
-		new OptimizeCssAssetsPlugin({
-			assetNameRegExp: /\.css$/g,
-			cssProcessor: require('cssnano'),
-			cssProcessorOptions: {
-				discardComments: {
-					removeAll: true 
-				}
-			},
-			canPrint: true
-		})
+		// new OptimizeCssAssetsPlugin({
+		// 	assetNameRegExp: /\.css$/g,
+		// 	cssProcessor: require('cssnano'),
+		// 	cssProcessorOptions: {
+		// 		discardComments: {
+		// 			removeAll: true 
+		// 		}
+		// 	},
+		// 	canPrint: true
+		// })
 	],
 	watchOptions: {
 		poll: 5000
