@@ -22,7 +22,6 @@ class StaggeredListController {
 		this.$interval = $interval;
 		this.$scope = $scope;
 		this.staggered_items = [];
-		this.source = [1,2,3,4,5,6,7,8,9,10];
 		this.interval_promise = null;
 
 		if (!this.delay){
