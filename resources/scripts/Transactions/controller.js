@@ -2,11 +2,7 @@ class Controller {
 	constructor(Transactions) {
 		console.log('Creating Transactions Controller');
 
-		this.Transactions = Transactions;
-	}
-
-	refresh(){
-		this.Transactions.refresh();
+		this.data = [1,2,3,4,5,6,7,8,9,10];
 	}
 }
 

@@ -1,17 +1,13 @@
 class Blocks {
 	constructor($location) {
-		this.$location = $location
+		this.$location = $location;
 
 		this.tabs = [{
 			label: 'Balance',
-			key: 'balance',
+			key: 'balances',
 			click: () => {
 				this.$location.path('/balances');
 			}
-		}, {
-			label: 'Addresses',
-			key: 'addresses',
-			click: () => {}
 		}, {
 			label: 'Transactions',
 			key: 'transactions',
@@ -26,7 +22,13 @@ class Blocks {
 			}
 		}];
 
-		this.current_tab = this.tabs[2];
+		for (var i = this.tabs.length - 1; i >= 0; i--) {
+			let tab = this.tabs[i];
+			if ($location.path() == '/'+tab.key){
+				this.current_tab = tab;
+				break;
+			}
+		};
 	}
 
 	select_tab(tab){

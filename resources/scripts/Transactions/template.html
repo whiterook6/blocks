@@ -1,5 +1,5 @@
-<staggered-list items="ctrl.Transactions.data" delay="100"></staggered-list>
+Transactions
 
-<button type="button"
-	class="button"
-	ng-click="ctrl.refresh()">Refresh</button>
+<div ng-repeat="item in ctrl.data"
+	class="fade-in"
+	ng-bind="item"></div>

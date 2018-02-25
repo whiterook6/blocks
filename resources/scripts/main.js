@@ -14,8 +14,6 @@ import Balances from './Balances/';
 import Settings from './Settings/';
 import Transactions from './Transactions/';
 
-import StaggeredList from './Components/StaggeredList/'
-
 angular
 	.module('blocks', [
 		ngAnimate,
@@ -26,7 +24,6 @@ angular
 		Settings,
 		Transactions,
 	])
-	.directive('staggeredList', StaggeredList)
 	.config(Routes)
 	.controller('BlocksController', BlocksController)
-	// .run(reload_optional);
+	.run(reload_optional);
