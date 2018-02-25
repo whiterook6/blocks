@@ -18,36 +18,36 @@
 	<div class="columns is-gapless">
 		<aside class="column">
 			<div class="section menu">
-				<h1 class="menu-label">
-					Overview
-				</h1>
-				<ul class="menu-list">
-					<li><a>My Balance</a></li>
-				</ul>
-				<h1 class="menu-label">
-					Wallets
-				</h1>
-				<ul class="menu-list">
-					<li><a class="is-active">Bitcoin</a></li>
-					<li><a>Ethereum</a></li>
-					<li><a>Add...</a></li>
-				</ul>
+				<div ng-repeat="menu in ctrl.Navigation.menu">
+					<div hint="because menu-label needs something above it for padding."></div>
+					<h1 class="menu-label"
+						ng-bind="menu.label"></h1>
+					<ul class="menu-list">
+						<li ng-repeat="child in menu.children">
+							<a ng-bind="child.label"
+								ng-class="{
+									'is-active': child.id = ctrl.Navigation.current_menu.id
+								}"
+								ng-click="ctrl.Navigation.select_menu(child)"></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</aside>
 		<div class="column is-9">
 			<div class="section">
 				<div class="tabs">
 					<ul>
-						<li ng-repeat="tab in ctrl.tabs"
-							ng-class="{'is-active': tab.key == ctrl.current_tab.key}"
-							ng-click="ctrl.select_tab(tab)">
+						<li ng-class="{
+								'is-active': tab.id == ctrl.Navigation.current_tab.id
+							}"
+							ng-click="ctrl.Navigation.select_tab(tab)"
+							ng-repeat="tab in ctrl.Navigation.tabs">
 							<a ng-bind="tab.label"></a>
 						</li>
 					</ul>
 				</div>
 				<div ng-view class="fade-in-left"></div>
-
-				
 			</div>
 		</div>
 	</div>
