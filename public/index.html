@@ -26,7 +26,7 @@
 						<li ng-repeat="child in menu.children">
 							<a ng-bind="child.label"
 								ng-class="{
-									'is-active': child.id = ctrl.Navigation.current_menu.id
+									'is-active': child.id == ctrl.Navigation.current_menu.id
 								}"
 								ng-click="ctrl.Navigation.select_menu(child)"></a>
 						</li>

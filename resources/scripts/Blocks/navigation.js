@@ -53,21 +53,23 @@ class NavigationService {
 				}
 			}]
 		}];
-
-
 	}
 
 	select_tab(tab){
-		if (tab.click){
-			this.current_tab = tab;
-			this.current_tab.click();
+		if (!this.current_tab || this.current_tab.id != tab.id){
+			if (tab.click){
+				this.current_tab = tab;
+				this.current_tab.click();
+			}
 		}
 	}
 
 	select_menu(menu){
-		if (menu.click){
-			this.current_menu = menu;
-			this.current_menu.click();
+		if (!this.current_menu || this.current_menu.id != menu.id){
+			if (menu.click){
+				this.current_menu = menu;
+				this.current_menu.click();
+			}
 		}
 	}
 }
