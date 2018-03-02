@@ -38,11 +38,19 @@
 			<div class="section">
 				<div class="tabs">
 					<ul>
-						<li ng-class="{
+						<li class="fade-in-top"
+							ng-class="{
 								'is-active': tab.id == ctrl.Navigation.current_tab.id
 							}"
 							ng-click="ctrl.Navigation.select_tab(tab)"
 							ng-repeat="tab in ctrl.Navigation.tabs">
+							<a ng-bind="tab.label"></a>
+						</li>
+						<li class="fade-in-top"
+							ng-class="{
+								'is-active': tab.id == ctrl.Navigation.current_tab.id
+							}"
+							ng-repeat="tab in ctrl.Navigation.sub_tabs">
 							<a ng-bind="tab.label"></a>
 						</li>
 					</ul>

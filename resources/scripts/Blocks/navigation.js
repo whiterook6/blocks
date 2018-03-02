@@ -6,18 +6,33 @@ class NavigationService {
 			label: 'Balance',
 			id: 'balances',
 			click: () => {
+				this.sub_tabs = [];
 				this.$location.path('/balances');
 			}
 		}, {
 			label: 'Transactions',
 			id: 'transactions',
 			click: () => {
+				this.sub_tabs = [{
+					label: '24h',
+					id: '24h',
+				}, {
+					label: '7d',
+					id: '7d',
+				}, {
+					label: '31d',
+					id: '31d',
+				}, {
+					label: 'All Time',
+					id: 'all',
+				}];
 				this.$location.path('/transactions');
 			}
 		}, {
 			label: 'Settings',
 			id: 'settings',
 			click: () => {
+				this.sub_tabs = [];
 				this.$location.path('/settings');
 			}
 		}];

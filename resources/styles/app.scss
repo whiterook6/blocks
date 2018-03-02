@@ -1,7 +1,11 @@
+$fade_in_distance: 20px;
+$fade_in_time: 0.2s;
+$fade_in_easing: ease-out;
+
 @keyframes fade-in-left {
 	from {
 		opacity: 0;
-		transform: translateX(-20px);
+		transform: translateX(-$fade_in_distance);
 	}
 	to {
 		opacity: 1;
@@ -10,10 +14,27 @@
 }
 
 .fade-in-left.ng-enter {
-	animation: fade-in-left 0.2s linear;
+	animation: fade-in-left $fade_in_time $fade_in_easing;
 }
 
-.tabs a {
-	transition: color 0.2s;
-	transition: border-bottom-color 0.2s;
+@keyframes fade-in-top {
+	from {
+		opacity: 0;
+		transform: translateY(-$fade_in_distance);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in-top.ng-enter {
+	animation: fade-in-top $fade_in_time $fade_in_easing;
+}
+
+.tabs {
+	a {
+		transition: color $fade_in_time;
+		transition: border-bottom-color $fade_in_time;
+	}
 }
