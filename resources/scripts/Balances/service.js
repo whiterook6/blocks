@@ -1,6 +1,7 @@
 class Balances {
 	constructor() {
 		console.log('Creating balances service');
+
 	}
 }
 

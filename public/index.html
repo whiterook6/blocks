@@ -38,7 +38,7 @@
 			<div class="section">
 				<div class="tabs">
 					<ul>
-						<li class="fade-in-top"
+						<li class="fade-in stagger-in"
 							ng-class="{
 								'is-active': tab.id == ctrl.Navigation.current_tab.id
 							}"
@@ -46,7 +46,7 @@
 							ng-repeat="tab in ctrl.Navigation.tabs">
 							<a ng-bind="tab.label"></a>
 						</li>
-						<li class="fade-in-top"
+						<li class="fade-in stagger-in"
 							ng-class="{
 								'is-active': tab.id == ctrl.Navigation.current_tab.id
 							}"
@@ -55,7 +55,7 @@
 						</li>
 					</ul>
 				</div>
-				<div ng-view class="fade-in-left"></div>
+				<div ng-view class="fade-in slide-in-left"></div>
 			</div>
 		</div>
 	</div>

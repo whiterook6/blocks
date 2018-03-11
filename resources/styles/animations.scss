@@ -1,0 +1,45 @@
+$easing: ease-out;
+$transition_time: 0.2s;
+$slide_in_distance: 20px;
+$stagger_time: 0.1s;
+
+@keyframes fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fade-out {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@keyframes slide-in-left {
+	from { transform: translateX(-$slide_in_distance); }
+	to { transform: translateX(0); }
+}
+
+@keyframes slide-in-top {
+	from { transform: translateY(-$slide_in_distance); }
+	to { transform: translateY(0); }
+}
+
+.fade-in.ng-enter{
+	animation: fade-in $transition_time $easing;
+}
+.fade-out.ng-leave{
+	animation: fade-in $transition_time $easing;
+}
+.slide-in-left.ng-enter {
+	animation: slide-in-left $transition_time $easing;
+}
+.slide-in-top.ng-enter {
+	animation: slide-in-top $transition_time $easing;
+}
+.stagger-in.ng-enter-stagger {
+	animation-delay: $stagger_time;
+	animation-duration: 0;
+}
+.stagger-out.ng-leave-stagger {
+	animation-delay: $stagger_time;
+	animation-duration: 0;
+}
