@@ -1,9 +1,12 @@
 class Blocks {
-	constructor(Navigation) {
+	constructor(Navigation, Wallets) {
 		this.Navigation = Navigation;
+		this.Wallets = Wallets;
+
+		this.Wallets.refresh();
 	}
 }
 
-Blocks.$inject = ['Navigation'];
+Blocks.$inject = ['Navigation', 'Wallets'];
 
 export default Blocks;

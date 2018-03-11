@@ -1,72 +1,26 @@
 class NavigationService {
-	constructor($location) {
+	constructor($location, wallets) {
 		this.$location = $location;
+		this.wallets = wallets;
 
 		this.tabs = [{
 			label: 'Balance',
 			id: 'balances',
 			click: () => {
-				this.sub_tabs = [];
 				this.$location.path('/balances');
 			}
 		}, {
 			label: 'Transactions',
 			id: 'transactions',
 			click: () => {
-				this.sub_tabs = [{
-					label: '24h',
-					id: '24h',
-				}, {
-					label: '7d',
-					id: '7d',
-				}, {
-					label: '31d',
-					id: '31d',
-				}, {
-					label: 'All Time',
-					id: 'all',
-				}];
 				this.$location.path('/transactions');
 			}
 		}, {
 			label: 'Settings',
 			id: 'settings',
 			click: () => {
-				this.sub_tabs = [];
 				this.$location.path('/settings');
 			}
-		}];
-
-		this.menu = [{
-			label: 'Overview',
-			children: [{
-				label: 'My Balances',
-				id: 'overview_balances',
-				click: () => {
-					this.$location.path('/balances');
-				}
-			}]
-		}, {
-			label: 'Wallets',
-			children: [{
-				label: 'Bitcoin',
-				id: 'wallets_bitcoin',
-				click: () => {
-					this.$location.path('/btc/balances');
-				}
-			}, {
-				label: 'Ethereum',
-				id: 'wallets_ethereum',
-				click: () => {
-					this.$location.path('/eth/balances');
-				}
-			}, {
-				label: 'Add...',
-				id: 'wallets_add',
-				click: () => {
-					this.$location.path('/wallets/add');
-				}
-			}]
 		}];
 	}
 
@@ -75,15 +29,6 @@ class NavigationService {
 			if (tab.click){
 				this.current_tab = tab;
 				this.current_tab.click();
-			}
-		}
-	}
-
-	select_menu(menu){
-		if (!this.current_menu || this.current_menu.id != menu.id){
-			if (menu.click){
-				this.current_menu = menu;
-				this.current_menu.click();
 			}
 		}
 	}

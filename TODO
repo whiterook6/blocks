@@ -1,0 +1,29 @@
+- Define Datatypes
+	- Wallets
+	- Transactions
+	- Settings?
+- Add Promises to Services
+- Add Routes/Getters, etc. to Services
+- Add directives for main DataTypes
+
+
+
+
+
+Transaction:
+- id
+- tx_id
+- block
+- input
+- output
+- fees
+- timestamp
+
+Wallet:
+- id
+- name
+- description
+- type
+- current balance
+- transactions
+

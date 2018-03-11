@@ -18,20 +18,29 @@
 	<div class="columns is-gapless">
 		<aside class="column">
 			<div class="section menu">
-				<div ng-repeat="menu in ctrl.Navigation.menu">
-					<div hint="because menu-label needs something above it for padding."></div>
-					<h1 class="menu-label"
-						ng-bind="menu.label"></h1>
-					<ul class="menu-list">
-						<li ng-repeat="child in menu.children">
-							<a ng-bind="child.label"
-								ng-class="{
-									'is-active': child.id == ctrl.Navigation.current_menu.id
-								}"
-								ng-click="ctrl.Navigation.select_menu(child)"></a>
-						</li>
-					</ul>
-				</div>
+				<div hint="because menu-label needs something above it for padding."></div>
+				<h1 class="menu-label">Overview</h1>
+				<ul class="menu-list">
+					<li>
+						<a ng-class="{
+								'is-active': ctrl.Navigation.active_menu == 'balances'
+							}"
+							ng-click="ctrl.Navigation.active_menu = 'balances'">My Balances</a>
+					</li>
+				</ul>
+				<h1 class="menu-label">Wallets</h1>
+				<ul class="menu-list">
+					<li ng-repeat="wallet in ctrl.Wallets.data">
+						<a ng-bind="wallet.name"
+							ng-class="{
+								'is-active': ctrl.Navigation.active_menu == wallet.id
+							}"
+							ng-click="ctrl.Navigation.active_menu = wallet.id"></a>
+					</li>
+					<li>
+						<a ng-href="/wallets/add">Add...</a>
+					</li>
+				</ul>
 			</div>
 		</aside>
 		<div class="column is-9">
