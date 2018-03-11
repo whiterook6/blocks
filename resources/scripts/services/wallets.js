@@ -31,7 +31,7 @@ class Wallets {
 				}];
 
 				resolve(this.data);
-			}, 5000);
+			}, 1000);
 		});
 	}
 }
