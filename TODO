@@ -24,6 +24,7 @@ Wallet:
 - name
 - description
 - type
-- current balance
-- transactions
-
+- Open, Low, High, Current Balance
+- Open, Low, High, Current Value
+- total spent
+- total profit

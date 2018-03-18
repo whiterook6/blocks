@@ -30,17 +30,6 @@
 				</ul>
 				<h1 class="menu-label">Wallets</h1>
 				<ul class="menu-list">
-					<li ng-if="ctrl.Wallets.outstanding_requests > 0">
-						<a>Loading...</a>
-					</li>
-					<li class="fade-in slide-in-left stagger-in"
-						ng-repeat="wallet in ctrl.Wallets.data">
-						<a ng-bind="wallet.name"
-							ng-class="{
-								'is-active': ctrl.Navigation.active_menu == wallet.id
-							}"
-							ng-click="ctrl.Navigation.active_menu = wallet.id"></a>
-					</li>
 					<li>
 						<a ng-href="/wallets/add">Add...</a>
 					</li>
@@ -68,6 +57,8 @@
 						</li>
 					</ul>
 				</div>
+				<wallet class="fade-in slide-in-left stagger-in"
+					ng-repeat="wallet in ctrl.Wallets.data"></wallet>
 				<div ng-view class="fade-in slide-in-left"></div>
 			</div>
 		</div>

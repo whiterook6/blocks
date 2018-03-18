@@ -1,5 +1,5 @@
 $easing: ease-out;
-$transition_time: 0.2s;
+$transition_time: 0.4s;
 $slide_in_distance: 20px;
 $stagger_time: 0.1s;
 
@@ -41,11 +41,7 @@ $stagger_time: 0.1s;
 .fade-in.slide-in-top.ng-enter {
 	animation: fade-in $transition_time $easing, slide-in-top $transition_time $easing;
 }
-.stagger-in.ng-enter-stagger {
-	animation-delay: $stagger_time;
-	animation-duration: 0;
-}
-.stagger-out.ng-leave-stagger {
+.stagger-in.ng-enter-stagger, .stagger-out.ng-leave-stagger {
 	animation-delay: $stagger_time;
 	animation-duration: 0;
 }

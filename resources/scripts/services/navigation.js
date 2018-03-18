@@ -9,18 +9,6 @@ class NavigationService {
 			click: () => {
 				this.$location.path('/balances');
 			}
-		}, {
-			label: 'Transactions',
-			id: 'transactions',
-			click: () => {
-				this.$location.path('/transactions');
-			}
-		}, {
-			label: 'Settings',
-			id: 'settings',
-			click: () => {
-				this.$location.path('/settings');
-			}
 		}];
 	}
 

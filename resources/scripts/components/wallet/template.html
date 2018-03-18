@@ -1,0 +1,20 @@
+<div class="box">
+	<span class="ticker" ng-bind="ctrl.ticker"></span>
+	<span class="name" ng-bind="ctrl.name"></span>
+	<span class="date">
+		Created on <span ng-bind="ctrl.date_created"></span>
+	</span>
+	<span class="cost">
+		Cost: $<span ng-bind="ctrl.cost"></span>
+	</span>
+	<span class="value">
+		Value: $<span ng-bind="ctrl.value"></span>
+	</span>
+	<span class="return"
+		ng-class="{
+			'has-text-success': ctrl.increase >= 0,
+			'has-text-danger': crtrl.increase < 0
+		}">
+		Return: <span ng-bind="ctrl.increase"></span>%
+	</span>
+</div>
